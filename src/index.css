@@ -2,3 +2,11 @@
   width: 100vw;
   height: 100vh;
 }
+
+body {
+  cursor: url(http://www.rw-designer.com/cursor-view/23175.png), auto;
+}
+
+body:hover {
+  cursor: url(http://www.rw-designer.com/cursor-view/23165.png), auto;
+}

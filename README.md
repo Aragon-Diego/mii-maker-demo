@@ -1,12 +1,10 @@
-# React + Vite
+# Mii maker demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This personal proyect is to re-learn react.js and to expose me to new technologies like three.js
 
-Currently, two official plugins are available:
+## To any personal of Nintendo®
+This proyect is for educational proposes only
+pls dont sue me 😇
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Assets
+All [Assets](https://github.com/datkat21/mii-creator) are "borrowed" from [@datkat21/mii-creator](https://github.com/datkat21/mii-creator) repo

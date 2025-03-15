@@ -14,7 +14,9 @@ export function MiiBodyM(props) {
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   console.log("🚀 ~ MiiBodyM ~ materials:", materials)
-  materials.mt_body.color.g = 1;
+  materials.mt_body.color.g = 0;
+  materials.mt_body.color.r = 1;
+  materials.mt_body.color.b = 0;
   const { actions, names } = useAnimations(animations, group)
   console.log("🚀 ~ MiiBodyM ~ names:", names)
   useEffect(()=>{

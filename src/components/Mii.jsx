@@ -9,9 +9,21 @@ export const Mii = () => {
       <ambientLight intensity={1} color={'#FFF'}/>
       <directionalLight
         position={[-0.01, 1, 1]}
-        intensity={5}
+        intensity={6}
       />
-      <Head index={6}/>
+      <directionalLight
+        position={[0.01, -1, -1]}
+        intensity={2}
+      />
+      <directionalLight
+        position={[5, 0, 0]}
+        intensity={2}
+      />
+      <directionalLight
+        position={[-5, 0, 0]}
+        intensity={2}
+      />
+      <Head index={2}/>
       <MiiBodyM/>
     </>
   )

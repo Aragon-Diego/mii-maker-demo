@@ -6,8 +6,8 @@ export const FirstMenu = (props) => {
     <>
       <Banner/>
       <div className='genderWrapper'>
-        <GenderButton  gender={'male'}/>
-        <GenderButton  gender={'female'}/>
+        <GenderButton setMenu={props.setMenu} setGender={props.setGender} gender={'male'}/>
+        <GenderButton setMenu={props.setMenu} setGender={props.setGender} gender={'female'}/>
       </div>
     </>
   )

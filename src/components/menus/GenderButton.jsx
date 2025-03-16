@@ -1,13 +1,21 @@
 import useSound from 'use-sound';
 const clickSound = '/assets/audio/Everything/Sample_0001.wav';
 const hoverSound = '/assets/audio/Everything/Sample_0006.wav';
+const mouseDownSound = '/assets/audio/Everything/Sample_0002.wav';
 
 export const GenderButton = (props) => {
   const [play, { stop }] = useSound(hoverSound, {volume:0.25});
-  const [playClick, { stop2 }] = useSound(clickSound, {volume:0.25});
+  const [playClick] = useSound(clickSound, {volume:0.25});
+  const [playActive] = useSound(mouseDownSound, {volume:0.25});
+  const checkClick = () => {
+    playClick();
+    props.setGender(props.gender);
+    props.setMenu(2);
+    console.log("🚀 ~ checkClick ~ checkClick");
+  }
   return (
     <>
-      <button onClick={()=>playClick()} onMouseEnter={() => play()} onMouseLeave={() => stop()} className="GenderButton">
+      <button onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className="GenderButton">
         {props.gender == 'male' ? (
          <svg width="170" height="170" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.3697 5.07947C19.3697 7.3325 17.5433 9.15894 15.2903 9.15894C13.0372 9.15894 11.2108 7.3325 11.2108 5.07947C11.2108 2.82644 13.0372 1 15.2903 1C17.5433 1 19.3697 2.82644 19.3697 5.07947Z" fill="#3587F5"></path><path d="M13.2249 9.43709H12.7869C10.5617 11.1987 8.70741 16.0199 8.0584 17.8742C7.68763 18.9338 9.17107 20.0066 10.0054 18.4305L12.3234 14.6291V27.9801C12.2616 28.3201 12.4161 29 13.5287 29C14.6413 29 14.8576 28.3201 14.8267 27.9801V20.7483C14.8267 20.5435 14.9927 20.3775 15.1976 20.3775H15.3828C15.5876 20.3775 15.7537 20.5435 15.7537 20.7483V27.9801C15.7228 28.3201 15.9391 29 17.0517 29C18.1643 29 18.3188 28.3201 18.257 27.9801V14.6291L20.575 18.4305C21.4093 20.0066 22.8928 18.9338 22.522 17.8742C21.873 16.0199 20.0187 11.1987 17.7935 9.43709H17.3557C16.7297 9.73434 16.0294 9.90066 15.2903 9.90066C14.5512 9.90066 13.8509 9.73434 13.2249 9.43709Z" fill="#3587F5"></path></svg>
         ):(

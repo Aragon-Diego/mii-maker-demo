@@ -43,7 +43,7 @@ export const Mii = async() => {
         intensity={3}
       />
       {/**/}
-      <Head index={1}/>
+      <Head index={10}/>
       <Nose index={1}/>
       <Face index={1}/>
       <Hair index={18} material={face.nodes.shape.material}/>

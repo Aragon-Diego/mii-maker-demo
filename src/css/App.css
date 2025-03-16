@@ -1,20 +1,100 @@
 * {
-  cursor: url(http://www.rw-designer.com/cursor-view/23175.png), auto;
+  cursor: url(http://www.rw-designer.com/cursor-view/23165.png), auto;
+  text-align: center;
+  margin: 0;
 }
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: wiiFont;
   line-height: 1.5;
   font-weight: 400;
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(#fff, #CDFFF0);
+  cursor: url(http://www.rw-designer.com/cursor-view/23165.png), auto;
 }
 html,body {
   padding: 0;
   margin: 0;
+  cursor: url(http://www.rw-designer.com/cursor-view/23165.png), auto;
 } 
 body {
   width: 100vw;
   height: 100vh;
+  cursor: url(http://www.rw-designer.com/cursor-view/23165.png), auto;
+  color: white;
+  text-shadow: 1px 1px 2px #5B6E6D;
+  -webkit-text-stroke: 0.1px #5B6E6D;
+}
+button {
+  border: 10px solid #5B6E6D;
+  border-radius: 15px;
+  color: white;
+  text-shadow: 1px 1px 2px #5B6E6D;
+  -webkit-text-stroke: 0.1px #5B6E6D;
+  position: relative;
+}
+.genderWrapper{
+  width: 80%;
+  margin-left: 10%;
+}
+.GenderButton {
+  width: 40%;
+  background-image: linear-gradient(#DCF1F2, #90A0A1);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.GenderButton:hover {
+  width: 50%;
+  height: 365px;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.GenderButton:hover svg{
+  width: 200px;
+  height: 200px;
+}
+.GenderButton:hover h1{
+  font-size: 55px;
+  top: -130px;
+}
+.GenderButton:active {
+  background-image: linear-gradient(#A5EECD, #07834b);
+}
+.GenderButton h1{
+  text-align:center;
+  position: relative;
+  left: 0px;
+  top: -120px;
+  margin: 0;
+  z-index: 99;
+  font-size: 48px;
+}
+.GenderButton svg{
+  padding-top: 45px;
+}
+.Banner {
+  display: flex;
+  width: 95%;
+  margin-left: 2.5%;
+  font-size: 20px;
+  background-image: linear-gradient(#CDFFF0, #FFF);
+  border: 10px solid #5B6E6D;
+  border-top: 0px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  margin-bottom: 100px;
+}
+.Banner div{
+  display: inline-table;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  width: 95%;
+  margin-left: 2.5%;
+  height: 50px;
+  background-color: #A2CAC8;
+  border-radius: 15px;
+}
+.Banner div h1{
+  margin: 20px 0 20px 0;
 }
 /*cursor: url(http://www.rw-designer.com/cursor-view/23165.png), pointer;*/

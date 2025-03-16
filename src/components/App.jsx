@@ -1,12 +1,14 @@
 import '../css/App.css'
 import { Canvas } from "@react-three/fiber";
 import { Mii } from './Mii';
-
+import { Audio } from './menus/Audio';
+import { FirstMenu } from './menus/FirstMenu'
 
 function App() {
   return (
     <>
-      <audio src="./assets/audio/1.mp3" controls autoplay></audio>
+      <FirstMenu/>
+      <Audio/>
     </>
   )
 }

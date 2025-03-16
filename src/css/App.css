@@ -88,6 +88,7 @@ button {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   margin-bottom: 100px;
+  max-height: 15%;
 }
 .Banner div{
   display: inline-table;
@@ -98,9 +99,7 @@ button {
   height: 50px;
   background-color: #A2CAC8;
   border-radius: 15px;
-}
-.Banner div h1{
-  margin: 20px 0 20px 0;
+  max-height: 15%;
 }
 .OptionsBanner {
   background-image: none;
@@ -112,7 +111,7 @@ button {
 }
 .player {
   position: absolute; 
-  bottom: 2%;
+  bottom: 5%;
   right: 2%;
 }
 ._3DMii{

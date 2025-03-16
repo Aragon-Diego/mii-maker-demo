@@ -1,7 +1,12 @@
 * {
-  cursor: url(/public/assets/images/23165.png), auto;
+  cursor: url(/assets/images/23165.png), auto;
   text-align: center;
   margin: 0;
+}
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 :root {
   font-family: wiiFont;
@@ -10,17 +15,17 @@
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(#fff, #CDFFF0);
-  cursor: url(/public/assets/images/23165.png), auto;
+  cursor: url(/assets/images/23165.png), auto;
 }
 html,body {
   padding: 0;
   margin: 0;
-  cursor: url(/public/assets/images/23165.png), auto;
+  cursor: url(/assets/images/23165.png), auto;
 } 
 body {
   width: 100vw;
   height: 100vh;
-  cursor: url(/public/assets/images/23165.png), auto;
+  cursor: url(/assets/images/23165.png), auto;
   color: white;
   text-shadow: 1px 1px 2px #5B6E6D;
   -webkit-text-stroke: 0.1px #5B6E6D;
@@ -113,5 +118,47 @@ button {
 ._3DMii{
   width: 40%;
   height: 80%;
+  display: inline-block;
+  float: left;
+}
+.OptionsBanner {
+
+}
+.Option, .Option-selected{
+  width: 10%;
+  border: 10px solid #5B6E6D;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top: 0px;
+  background-image: linear-gradient(#879799, #ADBDBE);
+  margin-left: 1%;
+  margin-right: 1%;
+}
+.Option-selected {
+  background-image: none;
+  background-color: #1F6C5A;
+}
+.Option:hover, .Option-selected:hover {
+  width: 12%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+.Option:active, .Option-selected:active  {
+  background-image: linear-gradient(#A5EECD, #07834b);
+}
+.Option img, .Option-selected img{
+  width: 40%;
+  padding-top:20%;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.TabMenu{
+  width: 57%;
+  height: 80%;
+  background-color: red;
+  float: right;
+  display: inline-block;
+  margin-right: 2%;
 }
 /*cursor: url(http://www.rw-designer.com/cursor-view/23165.png), pointer;*/

@@ -1,5 +1,6 @@
 import { OrbitControls } from "@react-three/drei"
 import { MiiBodyM } from "./MiiBodyM"
+import { MiiBodyF } from "./MiiBodyF"
 import { useGLTF } from '@react-three/drei'
 import { Head } from "./Head";
 import { Nose } from "./Nose";
@@ -21,7 +22,7 @@ const MiiSkinColorTable = [
 ];
 
 
-export const Mii = async() => {
+export const Mii = (props) => {
   const face = useGLTF('./assets/models/faces/face_1.glb');
   return (
     <>
@@ -43,11 +44,11 @@ export const Mii = async() => {
         intensity={3}
       />
       {/**/}
-      <Head index={10}/>
-      <Nose index={1}/>
+      <Head index={props.miiObj.head}/>
+      <Nose index={props.miiObj.nose}/>
       <Face index={1}/>
-      <Hair index={18} material={face.nodes.shape.material}/>
-      <MiiBodyM/>
+      <Hair index={props.miiObj.hair} material={face.nodes.shape.material}/>
+      {props.miiObj.gender == 'male' ? (<MiiBodyM/>) : (<MiiBodyF/>)}
     </>
   )
 }

@@ -5,13 +5,16 @@ Command: npx gltfjsx@6.5.3 public/assets/models/heads/head_1.glb
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
-let headPathToPreLoad = './assets/models/heads/head_1.glb';
-
+let pathToPreLoad = './assets/models/heads/head_1.glb';
+import * as THREE from 'three'
 
 export function Head(props) {
-  headPathToPreLoad = './assets/models/heads/head_' + props.index + '.glb';
-  console.log("🚀 ~ Head ~ headPathToPreLoad:", headPathToPreLoad)
-  const { nodes, materials } = useGLTF(headPathToPreLoad)
+  pathToPreLoad = './assets/models/heads/head_' + props.index + '.glb';
+  const { nodes, materials } = useGLTF(pathToPreLoad)
+  nodes.shape.material.metalness = 0.5;
+  nodes.shape.material.roughness = 0.5;
+  nodes.shape.material.color = {...nodes.shape.material.color, r:0.6, g:0.4, b:0.4};
+  console.log("🚀 ~ Head ~ nodes:", nodes.shape)
   return (
     <group {...props} dispose={null} scale={0.04} position={[0, 1, 0]}>
       <mesh geometry={nodes.shape.geometry} material={nodes.shape.material} />
@@ -19,5 +22,4 @@ export function Head(props) {
   )
 }
 
-useGLTF.preload(headPathToPreLoad)
-
+useGLTF.preload(pathToPreLoad)

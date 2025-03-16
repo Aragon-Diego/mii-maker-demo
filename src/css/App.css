@@ -1,3 +1,6 @@
+* {
+  cursor: url(http://www.rw-designer.com/cursor-view/23175.png), auto;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,3 +17,4 @@ body {
   width: 100vw;
   height: 100vh;
 }
+/*cursor: url(http://www.rw-designer.com/cursor-view/23165.png), pointer;*/

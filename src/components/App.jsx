@@ -5,10 +5,17 @@ import { Mii } from './Mii';
 
 function App() {
   return (
-    <Canvas>
-      <Mii/>
-    </Canvas>
+    <>
+      <audio src="./assets/audio/1.mp3" controls autoplay></audio>
+    </>
   )
 }
 
+/*
+{
+  <Canvas camera={{ position: [0, 0, 20], fov: 25 }}>
+    <Mii/>
+  </Canvas>
+}
+*/
 export default App

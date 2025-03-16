@@ -7,7 +7,7 @@ export const Banner = (props) => {
   return (
     <>
       <div className="OptionsBanner">
-        {bannerOptions.map((item, i) => <Option activeTab={props.activeTab} setActiveTab={props.setActiveTab} name={item.name} key={i}/>)}
+        {bannerOptions.map((item, i) => <Option miiObj={props.miiObj} setMiiObj={props.setMiiObj} activeTab={props.activeTab} setActiveTab={props.setActiveTab} name={item.name} key={i}/>)}
       </div>
     </>
   )

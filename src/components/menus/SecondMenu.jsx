@@ -18,7 +18,7 @@ export const SecondMenu = (props) => {
   }
   return (
     <>
-      <Banner activeTab ={activeTab} setActiveTab={setActiveTab}/>
+      <Banner activeTab ={activeTab} miiObj={miiObj} setMiiObj={setMiiObj} setActiveTab={setActiveTab}/>
       <div className='_3DMii'>
         <Canvas camera={{ position: [0, 0, 20], fov: 25}}>
           <gridHelper position={[0,-3,0]}/>

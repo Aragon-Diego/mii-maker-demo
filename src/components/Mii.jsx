@@ -8,19 +8,6 @@ import { Hair } from "./Hair";
 import { Face } from "./Face";
 
 
-const MiiSkinColorTable = [
-  {hex:"#FFD3AD"},
-  {hex:"#FEB66B"},
-  {hex:"#DE7942"},
-  {hex:"#FFAA8C"},
-  {hex:"#AD5129"},
-  {hex:"#632C18"},
-  {hex:"#ffbea5"},
-  {hex:"#ffc58f"},
-  {hex:"#8c3c23"},
-  {hex:"#3c2d23"},
-];
-
 
 export const Mii = (props) => {
   const face = useGLTF('./assets/models/faces/face_1.glb');

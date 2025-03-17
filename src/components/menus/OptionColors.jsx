@@ -7,32 +7,22 @@ export const OptionColor = (props) => {
   const [play, { stop }] = useSound(hoverSound, {volume:0.25});
   const [playClick] = useSound(clickSound, {volume:0.25});
   const [playActive] = useSound(mouseDownSound, {volume:0.25});
+  let toCheckVsIndex = props?.miiSkinColor;
+  if(props.optionRef == 'hair') {
+    toCheckVsIndex = props?.hairColor;
+  }
   const checkClick = () => {
-    let tempObj = {};
-    tempObj[props.optionRef] = (props.name+1);
-    props.setMiiObj({...props.miiObj, ...tempObj})
+    if(props.optionRef == 'head') {
+      props.setMiiSkinColor(props.index);
+    } else if(props.optionRef == 'hair') {
+      props.setHairColor(props.index);
+    }
     playClick();
   }
-  const getIdexOfFace = () => {
-    var n = 0;
-    if((props.name + 1) < 10) {
-      n = (''+(props.name+1)).padStart(2, "0");
-    } else {
-      n = (''+(props.name+1));
-    }
-    return n;
-  }
-  const getSvg = () => {
-    var ref = props.optionRef == 'head' ? 'face' : props.optionRef;
-    return ref;
-  }
+ 
   return (
     <>
-      <div onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className={props.miiObj.head == (props.name+1) ? 'Option Option-tab-selected ' : 'Option Option-tab'}>
-        <svg className='' xmlns="http://www.w3.org/2000/svg">
-          <image href={'/assets/images/svg/' + getSvg() + '-' + getIdexOfFace() + '.svg'}/>
-        </svg>
-      </div>
+      <div onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className={ toCheckVsIndex == (props.index) ? 'Option-color-selected ' : 'Option-color'} style={{backgroundColor:props.name}}></div>
     </>
   )
 }

@@ -9,7 +9,6 @@ export const Option = (props) => {
   const [playActive] = useSound(mouseDownSound, {volume:0.25});
   const checkClick = () => {
     props.setActiveTab(props.name)
-    props.setMiiObj({... props.miiObj, hair:props.name})
     playClick();
   }
   return (

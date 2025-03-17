@@ -7,19 +7,27 @@ export const OptionTab = (props) => {
   const [play, { stop }] = useSound(hoverSound, {volume:0.25});
   const [playClick] = useSound(clickSound, {volume:0.25});
   const [playActive] = useSound(mouseDownSound, {volume:0.25});
+  const hairIndexing = props.optionRef == 'hair';
+  let nameToCheck = (props.name+1);
+  if(hairIndexing) {
+    nameToCheck = props.name;
+  }
   const checkClick = () => {
     let tempObj = {...props.miiObj};
     tempObj[props.optionRef].index = props.name+1;
+    console.log("🚀 ~ checkClick ~ tempObj[props.optionRef].index:", tempObj[props.optionRef].index)
     console.log("🚀 ~ checkClick ~ tempObj:", tempObj)
     props.setMiiObj({...tempObj})
     playClick();
   }
   const getIdexOfFace = () => {
     var n = 0;
-    if((props.name + 1) < 10) {
-      n = (''+(props.name+1)).padStart(2, "0");
-    } else {
-      n = (''+(props.name+1));
+    if(!(hairIndexing && nameToCheck == 0)) {
+      if((nameToCheck) < 10) {
+        n = (''+nameToCheck).padStart(2, "0");
+      } else {
+        n = (''+nameToCheck);
+      }
     }
     return n;
   }
@@ -29,7 +37,7 @@ export const OptionTab = (props) => {
   }
   return (
     <>
-      <div onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className={props.miiObj.head == (props.name+1) ? 'Option Option-tab-selected' : 'Option Option-tab'}>
+      <div onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className={props.miiObj[props.optionRef].index == props.name+1 ? 'Option Option-tab-selected' : 'Option Option-tab'}>
         <svg className='' xmlns="http://www.w3.org/2000/svg">
           <image href={'/assets/images/svg/' + getSvg() + '-' + getIdexOfFace() + '.svg'}/>
         </svg>

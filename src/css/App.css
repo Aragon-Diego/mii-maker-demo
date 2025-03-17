@@ -167,6 +167,13 @@ button {
 .TabMenuOptions{
   width: 65%;
   height: 100%;
+  float: left;
+  overflow-y: scroll;
+}
+.TabMenuColors {
+  width: 35%;
+  height: 100%;
+  float: left;
 }
 .Option-tab, .Option-tab-selected{
   width: 27%;
@@ -186,5 +193,23 @@ button {
 }
 .Option-tab:hover, .Option-tab-selected:hover{
   width: 32%;
+}
+.Option-color, .Option-color-selected {
+  float: left;
+  background-image: none;
+  width: 27%;
+  height: 10%;
+  border: 5px solid #5B6E6D;
+  border-radius: 15px;
+  margin: 5px;
+}
+.Option-color:hover {
+  border: 5px solid #A5EECD;
+}
+.Option-color:active {
+  border: 5px solid #07834b;
+}
+.Option-color-selected {
+  border: 5px solid #07834b;
 }
 /*cursor: url(http://www.rw-designer.com/cursor-view/23165.png), pointer;*/

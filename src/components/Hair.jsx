@@ -17,7 +17,6 @@ export function Hair(props) {
   material.color = {... material.color, ...props.color};
   return (
     <group {...props} dispose={null} scale={0.04} position={[0, 0.79, 0.15]}>
-      <ambientLight />
       <mesh geometry={nodes.shape.geometry} material={material}/>
     </group>
   )

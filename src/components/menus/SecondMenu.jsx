@@ -32,7 +32,18 @@ export const SecondMenu = (props) => {
   }
   ChangeHairColor();
   const getTabMenu = () => {
-    if(activeTab == 3) {
+    if(activeTab == 1) {
+      setMiiObj({
+        head: {index:1, color:{r:0.8, g:0.4, b:0.2}},
+        nose: {index:1, color:{r:0.69, g:0.3, b:0.33}},
+        hair: {index:1, color:{r:0.5, g:0.5, b:0.5}},
+        eyes: {index:1, superPosition:[null, null, null], superScale:[null, null, null]},
+        eyebrows: {index:1, superPosition:[null, null, null], superScale:[null, null, null]},
+        mouth: {index:1, superPosition:[null, null, null], superScale:[null, null, null]},
+        gender:props.gender
+      });
+      props.setMenu(1);
+    } else if(activeTab == 3) {
       return <FaceTab MiiSkinColorTable={props.MiiSkinColorTable} setMiiSkinColor={setMiiSkinColor} miiSkinColor={miiSkinColor} setMiiObj={setMiiObj} miiObj={miiObj}/>
     } else if(activeTab == 4) {
       return <HairTab HairColorTable={props.HairColorTable} setHairColor={setHairColor} hairColor={hairColor} setMiiObj={setMiiObj} miiObj={miiObj}/>

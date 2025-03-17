@@ -14,7 +14,7 @@ export const Option = (props) => {
   return (
     <>
       <div onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className={props.activeTab == props.name ? 'Option-selected' : 'Option'}>
-        <img src={'/assets/images/menu/' + props.name + '.png'} unselectable="on"/>
+        {props.text == null ? (<img src={'/assets/images/menu/' + props.name + '.png'} unselectable="on"/>) : (<h1 style={{marginTop:'20%'}}>{props.text}</h1>)}
       </div>
     </>
   )

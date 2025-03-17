@@ -1,6 +1,6 @@
 @font-face {
   font-family: wiiFont;
-  src: url(./assets/fonts/wiiFont.woff2);
+  src: url(/assets/fonts/wiiFont.woff2);
 }
 #root {
   width: 100vw;

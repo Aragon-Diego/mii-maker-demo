@@ -10,7 +10,7 @@ import {Svg} from './Svg'
 
 
 export const Mii = (props) => {
-  const face = useGLTF('./assets/models/faces/face_1.glb');
+  const face = useGLTF('/assets/models/faces/face_1.glb');
   const getIndex = (indexToCheck) => {
     var n = 0;
     if((indexToCheck) < 10) {
@@ -51,7 +51,7 @@ export const Mii = (props) => {
       {/**/}
       <Head index={props.miiObj.head.index} color={props.miiObj.head.color}/>
       <Nose superScale={0} index={props.miiObj.nose.index} color={props.miiObj.nose.color}/>
-      <Svg superScale={0} superPosition={getSuperPosition([0,1.45,0.9], props.miiObj.mouth.superPosition)} svg={'mouth-'+ getIndex(props.miiObj.mouth.index)}/>
+      <Svg superScale={0} superPosition={getSuperPosition([0,1.45,1.01], props.miiObj.mouth.superPosition)} svg={'mouth-'+ getIndex(props.miiObj.mouth.index)}/>
       <Svg superScale={0} superPosition={getSuperPosition([0.3,2.2,1], props.miiObj.eyes.superPosition)} svg={'eyes-'+ getIndex(props.miiObj.eyes.index)}/>
       <Svg superScale={0} superPosition={getSuperPosition([-0.3,2.2,1], props.miiObj.eyes.superPosition, true)} svg={'eyes-'+ getIndex(props.miiObj.eyes.index)} mirror={true}/>
       <Svg superScale={0} superPosition={getSuperPosition([0.3,2.5,1], props.miiObj.eyebrows.superPosition)} svg={'eyebrows-'+ getIndex(props.miiObj.eyebrows.index)}/>

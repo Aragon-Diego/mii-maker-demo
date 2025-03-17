@@ -10,7 +10,7 @@ import { SkeletonUtils } from 'three-stdlib'
 
 export function MiiBodyM(props) {
   const group = React.useRef()
-  const { scene, animations } = useGLTF('./assets/models/bodyM.glb')
+  const { scene, animations } = useGLTF('/assets/models/bodyM.glb')
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   materials.mt_body.color.g = 0;
@@ -34,4 +34,4 @@ export function MiiBodyM(props) {
   )
 }
 
-useGLTF.preload('./assets/models/bodyM.glb')
+useGLTF.preload('/assets/models/bodyM.glb')

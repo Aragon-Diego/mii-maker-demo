@@ -1,5 +1,6 @@
 {
   "name": "mii-maker-demo",
+  "homepage": "https://aragon-diego.github.io/mii-maker-demo/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,7 +8,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.4",

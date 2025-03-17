@@ -10,7 +10,7 @@ import {Svg} from './Svg'
 
 
 export const Mii = (props) => {
-  const face = useGLTF('./assets/models/faces/face_1.glb');
+  const face = useGLTF('/mii-maker-demo/assets/models/faces/face_1.glb');
   const getIndex = (indexToCheck) => {
     var n = 0;
     if((indexToCheck) < 10) {

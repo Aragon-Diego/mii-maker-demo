@@ -1,7 +1,7 @@
 import useSound from 'use-sound';
-const clickSound = '/assets/audio/Everything/Sample_0001.wav';
-const hoverSound = '/assets/audio/Everything/Sample_0006.wav';
-const mouseDownSound = '/assets/audio/Everything/Sample_0002.wav';
+const clickSound = '/mii-maker-demo/assets/audio/Everything/Sample_0001.wav';
+const hoverSound = '/mii-maker-demo/assets/audio/Everything/Sample_0006.wav';
+const mouseDownSound = '/mii-maker-demo/assets/audio/Everything/Sample_0002.wav';
 
 export const OptionTab = (props) => {
   const [play, { stop }] = useSound(hoverSound, {volume:0.25});
@@ -39,7 +39,7 @@ export const OptionTab = (props) => {
     <>
       <div onMouseDown={playActive} onClick={checkClick} onMouseEnter={play} onMouseLeave={stop} className={props.miiObj[props.optionRef].index == props.name+1 ? 'Option Option-tab-selected' : 'Option Option-tab'}>
         <svg className={blackSvg ? 'blackSvg' : ''} xmlns="http://www.w3.org/2000/svg">
-          <image href={'/assets/images/svg/' + getSvg() + '-' + getIdexOfFace() + '.svg'}/>
+          <image href={'/mii-maker-demo/assets/images/svg/' + getSvg() + '-' + getIdexOfFace() + '.svg'}/>
         </svg>
       </div>
     </>

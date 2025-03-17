@@ -5,11 +5,11 @@ Command: npx gltfjsx@6.5.3 public/assets/models/faces/face_1.glb
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
-let pathToPreLoad = './assets/models/faces/face_1.glb';
+let pathToPreLoad = '/mii-maker-demo/assets/models/faces/face_1.glb';
 
 
 export function Face(props) {
-  pathToPreLoad = './assets/models/faces/face_' + props.index + '.glb';
+  pathToPreLoad = '/mii-maker-demo/assets/models/faces/face_' + props.index + '.glb';
   const { nodes, materials } = useGLTF(pathToPreLoad)
   nodes.shape.material.metalness = 0.5;
   nodes.shape.material.roughness = 0.5;

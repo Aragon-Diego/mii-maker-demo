@@ -17,7 +17,6 @@ export function MiiBodyF(props) {
   materials['mt_body.001'].color.g = 0;
   materials['mt_body.001'].color.r = 1;
   materials['mt_body.001'].color.b = 0;
-  console.log("🚀 ~ useEffect ~ names:", names)
   useEffect(()=>{
     actions[names[1]].reset().play();
   }, [])
@@ -36,35 +35,3 @@ export function MiiBodyF(props) {
 
 useGLTF.preload('./assets/models/bodyF.glb')
 
-
-/**
- * 
- * export function MiiBodyM(props) {
-   const group = React.useRef()
-   const { scene, animations } = useGLTF('./assets/models/bodyM.glb')
-   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
-   const { nodes, materials } = useGraph(clone)
-   console.log("🚀 ~ MiiBodyM ~ materials:", materials)
-   materials.mt_body.color.g = 0;
-   materials.mt_body.color.r = 1;
-   materials.mt_body.color.b = 0;
-   const { actions, names } = useAnimations(animations, group)
-   console.log("🚀 ~ MiiBodyM ~ names:", names)
-   useEffect(()=>{
-     actions[names[1]].reset().play();
-   }, []);
- 
-   return (
-     <group ref={group} {...props} dispose={null}>
-       <group name="Scene">
-         <group name="m" rotation={[Math.PI / 2, 0, 0]} scale={0.05} position={[0,-3,0]}>
-           <primitive object={nodes.TopL} />
-           <skinnedMesh name="body_m" geometry={nodes.body_m.geometry} material={materials.mt_body} skeleton={nodes.body_m.skeleton} />
-           <skinnedMesh name="legs_m" geometry={nodes.legs_m.geometry} material={materials.mt_pants} skeleton={nodes.legs_m.skeleton} />
-         </group>
-       </group>
-     </group>
-   )
- }
- 
- */

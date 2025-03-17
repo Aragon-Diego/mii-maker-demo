@@ -11,7 +11,6 @@ export const GenderButton = (props) => {
     playClick();
     props.setGender(props.gender);
     props.setMenu(2);
-    console.log("🚀 ~ checkClick ~ checkClick");
   }
   return (
     <>

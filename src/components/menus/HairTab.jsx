@@ -13,11 +13,9 @@ export const HairTab = (props) => {
     index += 1;
     return acum;
   }, []);
-  console.log("🚀 ~ hairArrTotals ~ hairArrTotals:", hairArrTotals)
   hairArrTotals = hairArrTotals.map((item, i) => {
     return <OptionTab optionRef={'hair'} miiObj={props.miiObj} setMiiObj={props.setMiiObj} name={item} key={item}/>
   });
-  console.log("🚀 ~ hairArrTotals=hairArrTotals.map ~ hairArrTotals:", hairArrTotals)
   const colorArrTotals = props.HairColorTable.map((item, i) => {
     return <OptionColor optionRef={'hair'} HairColorTable={props.HairColorTable} setHairColor={props.setHairColor} hairColor={props.hairColor}  miiObj={props.miiObj} setMiiObj={props.setMiiObj} name={item.hex} index={i} key={i}/>
   });

@@ -212,4 +212,7 @@ button {
 .Option-color-selected {
   border: 5px solid #07834b;
 }
+.blackSvg {
+  fill: black;
+}
 /*cursor: url(http://www.rw-designer.com/cursor-view/23165.png), pointer;*/

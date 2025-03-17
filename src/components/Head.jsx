@@ -14,7 +14,7 @@ export function Head(props) {
   nodes.shape.material.metalness = 0.5;
   nodes.shape.material.roughness = 0.5;
   nodes.shape.material.color = {...nodes.shape.material.color, ...props.color};
-  console.log("🚀 ~ Head ~ nodes:", nodes.shape)
+
   return (
     <group {...props} dispose={null} scale={0.04} position={[0, 1, 0]}>
       <mesh geometry={nodes.shape.geometry} material={nodes.shape.material} />

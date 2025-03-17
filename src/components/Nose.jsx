@@ -5,11 +5,11 @@ Command: npx gltfjsx@6.5.3 public/assets/models/noses/nose_1.glb
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
-let pathToPreLoad = '/assets/models/noses/nose_1.glb';
+let pathToPreLoad = '/mii-maker-demo/assets/models/noses/nose_1.glb';
 import * as THREE from 'three'
 
 export function Nose(props) {
-  pathToPreLoad = '/assets/models/noses/nose_' + props.index + '.glb';
+  pathToPreLoad = '/mii-maker-demo/assets/models/noses/nose_' + props.index + '.glb';
   const { nodes, materials } = useGLTF(pathToPreLoad)
   nodes.shape.material.color = {...nodes.shape.color, ...props.color}
   return (

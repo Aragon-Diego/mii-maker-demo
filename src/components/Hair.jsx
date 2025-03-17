@@ -5,11 +5,19 @@ Command: npx gltfjsx@6.5.3 public/assets/models/hairs/hair_1.glb
 
 import React from 'react'
 import { useGLTF } from '@react-three/drei'
+<<<<<<< HEAD
+let pathToPreLoad = '/assets/models/hairs/hair_1.glb';
+import * as THREE from 'three'
+
+export function Hair(props) {
+  pathToPreLoad = '/assets/models/hairs/hair_' + props.index + '.glb';
+=======
 let pathToPreLoad = '/mii-maker-demo/assets/models/hairs/hair_1.glb';
 import * as THREE from 'three'
 
 export function Hair(props) {
   pathToPreLoad = '/mii-maker-demo/assets/models/hairs/hair_' + props.index + '.glb';
+>>>>>>> main
   const { nodes, materials } = useGLTF(pathToPreLoad);
   let material = props.material;
   material.metalness = 0.5;

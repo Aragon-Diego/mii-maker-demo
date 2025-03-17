@@ -11,6 +11,7 @@ import * as THREE from 'three'
 export function Nose(props) {
   pathToPreLoad = './assets/models/noses/nose_' + props.index + '.glb';
   const { nodes, materials } = useGLTF(pathToPreLoad)
+  nodes.shape.material.color = {...nodes.shape.color, ...props.color}
   return (
     <group {...props} dispose={null} scale={0.04} position={[0, 1.8, 1.1]}>
       <mesh geometry={nodes.shape.geometry} material={nodes.shape.material} />

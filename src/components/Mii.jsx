@@ -44,10 +44,10 @@ export const Mii = (props) => {
         intensity={3}
       />
       {/**/}
-      <Head index={props.miiObj.head}/>
-      <Nose index={props.miiObj.nose}/>
+      <Head index={props.miiObj.head.index} color={props.miiObj.head.color}/>
+      <Nose index={props.miiObj.nose.index} color={props.miiObj.nose.color}/>
       <Face index={1}/>
-      <Hair index={props.miiObj.hair} material={face.nodes.shape.material}/>
+      <Hair index={props.miiObj.hair.index} color={props.miiObj.hair.color} material={face.nodes.shape.material}/>
       {props.miiObj.gender == 'male' ? (<MiiBodyM/>) : (<MiiBodyF/>)}
     </>
   )

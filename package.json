@@ -1,5 +1,6 @@
 {
   "name": "mii-maker-demo",
+  "homepage": "https://aragon-diego.github.io/mii-maker-demo/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

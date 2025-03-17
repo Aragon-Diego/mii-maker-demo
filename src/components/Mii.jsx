@@ -6,7 +6,7 @@ import { Head } from "./Head";
 import { Nose } from "./Nose";
 import { Hair } from "./Hair";
 import { Face } from "./Face";
-
+import {Svg} from './Svg'
 
 
 export const Mii = (props) => {
@@ -32,7 +32,12 @@ export const Mii = (props) => {
       />
       {/**/}
       <Head index={props.miiObj.head.index} color={props.miiObj.head.color}/>
-      <Nose index={props.miiObj.nose.index} color={props.miiObj.nose.color}/>
+      <Nose superScale={0} index={props.miiObj.nose.index} color={props.miiObj.nose.color}/>
+      <Svg superScale={0} superPosition={[0,1.45,0.9]} svg={'mouth-20'}/>
+      <Svg superScale={0} superPosition={[0.3,2.2,1]} svg={'eyes-02'}/>
+      <Svg superScale={0} superPosition={[-0.3,2.2,1]} svg={'eyes-02'} mirror={true}/>
+      <Svg superScale={0} superPosition={[0.3,2.5,1]} svg={'eyebrows-01'}/>
+      <Svg superScale={0} superPosition={[-0.3,2.5,1]} svg={'eyebrows-01'} mirror={true}/>
       <Face index={1}/>
       <Hair index={props.miiObj.hair.index} color={props.miiObj.hair.color} material={face.nodes.shape.material}/>
       {props.miiObj.gender == 'male' ? (<MiiBodyM/>) : (<MiiBodyF/>)}

@@ -14,10 +14,9 @@ export function Hair(props) {
   let material = props.material;
   material.metalness = 0.5;
   material.roughness = 0.5;
-  material.color = {... material.color, r:0, g:0, b: 0};
+  material.color = {... material.color, ...props.color};
   return (
-    <group {...props} dispose={null} scale={0.04} position={[0, 0.7, 0.0]}>
-      <ambientLight />
+    <group {...props} dispose={null} scale={0.04} position={[0, 0.79, 0.15]}>
       <mesh geometry={nodes.shape.geometry} material={material}/>
     </group>
   )

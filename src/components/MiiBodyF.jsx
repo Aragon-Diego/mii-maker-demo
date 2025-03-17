@@ -10,11 +10,7 @@ import { SkeletonUtils } from 'three-stdlib'
 
 export function MiiBodyF(props) {
   const group = React.useRef()
-<<<<<<< HEAD
   const { scene, animations } = useGLTF('/assets/models/bodyF.glb')
-=======
-  const { scene, animations } = useGLTF('/mii-maker-demo/assets/models/bodyF.glb')
->>>>>>> main
   const clone = React.useMemo(() => SkeletonUtils.clone(scene), [scene])
   const { nodes, materials } = useGraph(clone)
   const { actions, names } = useAnimations(animations, group)
@@ -37,9 +33,5 @@ export function MiiBodyF(props) {
   )
 }
 
-<<<<<<< HEAD
 useGLTF.preload('/assets/models/bodyF.glb')
-=======
-useGLTF.preload('/mii-maker-demo/assets/models/bodyF.glb')
->>>>>>> main
 

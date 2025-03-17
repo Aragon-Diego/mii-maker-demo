@@ -16,7 +16,6 @@ export const OptionTab = (props) => {
   const checkClick = () => {
     let tempObj = {...props.miiObj};
     tempObj[props.optionRef].index = props.name+1;
-    console.log("🚀 ~ checkClick ~ tempObj[props.optionRef].index:", tempObj[props.optionRef].index -1)
     props.setMiiObj({...tempObj})
     playClick();
   }
